@@ -6,13 +6,23 @@
     <title>Random Cat Facts Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="demo">
     <div class="container">
         <h1>Random Cat Facts Generator</h1>
         <button id="getFactBtn">Get a Cat Fact</button>
         <div id="meowAnimation"></div>
         <p id="catFact"></p>
     </div>
+    <div id="imageContainer">
+        <img src="images/1.jfif" class="rotatingImage">
+        <img src="images/2.jfif" class="rotatingImage" style="display: none;">
+        <img src="images/3.jfif" class="rotatingImage" style="display: none;">
+        <img src="images/4.jfif" class="rotatingImage" style="display: none;">
+        <img src="images/5.jfif" class="rotatingImage" style="display: none;">
+        <img src="images/6.jfif" class="rotatingImage" style="display: none;">
+    </div>
+    <img id="catGun" src="images/cat-gun.png" alt="Cat Gun">
+    <div id="instructions">Click on the gun cat to defend yourself. He is a beginner but you need to stop him.</div>
     <script src="script.js"></script>
 </body>
 </html>

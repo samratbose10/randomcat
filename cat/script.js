@@ -28,3 +28,27 @@ document.getElementById('getFactBtn').addEventListener('click', async () => {
         catFact.textContent = "Could not retrieve a cat fact at this time.";
     }
 });
+
+// Background image rotation
+const images = document.querySelectorAll('.rotatingImage');
+let currentImageIndex = 0;
+setInterval(() => {
+    images[currentImageIndex].style.display = 'none';
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].style.display = 'block';
+}, 1000);
+
+// Set custom cursor
+document.getElementById("demo").style.cursor = "url('images/cat-paw.png'), auto";
+
+// Move the cat gun image to a random position when clicked
+const catGun = document.getElementById('catGun');
+
+catGun.addEventListener('click', () => {
+    const maxX = window.innerWidth - catGun.offsetWidth;
+    const maxY = window.innerHeight - catGun.offsetHeight;
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+    catGun.style.left = `${randomX}px`;
+    catGun.style.top = `${randomY}px`;
+});
